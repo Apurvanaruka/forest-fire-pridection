@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>prediction page</title>
+</head>
+<body>
+    <form action="{{ url_for( 'predictionPage' ) }}" method="post">
+        <h1>FWI prediction</h1>
+        <input type="number" ,step='0.1', placeholder="Temperature", name="Temperature" required="required"><br>
+        <input type="number", placeholder="RH", name="RH" required="required"><br>
+        <input type="number", placeholder="Ws" name="Ws" required="required"><br>
+        <input type="number", placeholder="Rain", name="Rain" required="required"><br>
+        <input type="number", placeholder="FFMC", name="FFMC" required="required"><br>
+        <input type="number", placeholder="DMC", name="DMC" required="required"><br>
+        <input type="number", placeholder="DC", name="DC" required="required"><br>
+        <input type="number", placeholder="ISI", name="ISI" required="required"><br>
+        <input type="number", placeholder="BUI", name="BUI" required="required"><br>
+        <input type="number", placeholder="Classes", name="Classes" required="required"><br>
+        <input type="number", placeholder="Region", name="Region" required="required"><br>
+        <input type="submit" placeholder="submit">
+    </form>
+
+    <h1>The FWI is = {{ result }}</h1>
+    
+</body>
+</html>
